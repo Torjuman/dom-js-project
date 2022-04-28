@@ -1,0 +1,131 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    margin: 1rem 0rem;
+    padding: 1rem;
+    outline: none;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+}
+
+button:hover {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+
+h1 {
+    text-shadow: 1px 1px 0px #fff, -1px 1px 0px #fff, 1px -1px 0px #fff, -1px -1px 0px #fff;
+    text-align: center;
+}
+
+input[type='text'] {
+    background-color: #fff;
+    color: #424244;
+    border: #000;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+}
+
+.copy-btn{
+    background-color: #fff;
+    color: #999;
+    border: #000;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;    
+    gap: 0.5rem;
+    position: relative;
+}
+.input-icon {
+    position: absolute;
+    background-color: #999;
+    color: #424242;
+    padding: 0.4rem;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+
+.output {
+    margin-left: 1.3rem;
+}
+
+.output:focus {
+    outline: none;
+    border: none;
+}
+
+.toast-message {
+    position: fixed;
+    z-index: 999;
+    top: 2rem;
+    right: 2rem;
+    padding: 1rem;
+    outline: none;
+    background-color: darkcyan;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 1rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+}
+.toast-message-slide-in {
+    animation: toast-message-in 0.5s ease-in;
+}
+.toast-message-slide-out {
+    animation: toast-message-out 0.5s ease-in;
+}
+
+@keyframes toast-message-in {
+    from {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes toast-message-out {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+}
